@@ -1,0 +1,14 @@
+{
+  "name": "generateur_db",
+  "version": "1.0.0",
+  "description": "Génère une DB sqlite pour faire des tests",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "tsc && node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.18"
+  }
+}
