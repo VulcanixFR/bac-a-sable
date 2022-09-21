@@ -19,5 +19,10 @@ Listes utilisées:
 
 Comme son nom l'indique, le but est de génerer une date de naissance aléatoirement.
 
+### `exporte_tableau.ts`
 
+Contient (pas encore) des fonctions pour exporter un objet ou tableau JS en un autre format
 
+Supporte actuellement:
+ - Markdown
+ - CSV (planifié)
