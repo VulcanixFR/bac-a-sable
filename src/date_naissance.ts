@@ -4,7 +4,7 @@ export function date_naissance (): Date {
     const MAINTENANT = new Date();
 
     // Définis l'année de naissance [Max 105ans :D]
-    const approx_age = 15 + ~~(Math.random() * 90); 
+    const approx_age = ~~(Math.random() * 100); 
     
     //Choisis un mois (0 = Janvier)
     const mois = ~~(Math.random() * 11); 
@@ -21,11 +21,8 @@ export function date_naissance (): Date {
 }
 
 // Fonction qui transforme une date en un truc lisible
-export function Date_vers_String (
-    d: Date, 
-    options?: any,
-    locale = "default"
-) {
-    options = options || {weekday: "long", year: "numeric", month: "long", day: "numeric"}
-    return new Intl.DateTimeFormat(locale, options).format(d);
+export function Date_vers_String (d: Date) {
+    let date = new Intl.DateTimeFormat("default", {weekday: "long", year: "numeric", month: "long", day: "numeric"}).format(d);
+    const MAINTENANT = new Date();
+    return date + ` (${MAINTENANT.getFullYear() - d.getFullYear()} ans)`
 }
