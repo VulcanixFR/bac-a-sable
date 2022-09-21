@@ -5,7 +5,8 @@
   "main": "build/index.js",
   "scripts": {
     "test": "tsc && node build/index.js",
-    "md": "tsc && node build/index.js > out.md"
+    "md": "tsc && node build/index.js > out.md",
+    "math_random": "tsc && node build/test_math_random.js > out.txt"
   },
   "author": "",
   "license": "ISC",
