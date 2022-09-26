@@ -1,4 +1,4 @@
-import { genere_nom, Nom, importe_prenoms, importe_noms, Nom_vers_String } from './gen_nom';
+import { genere_nom, importe_prenoms, importe_noms, Nom_vers_String } from './gen_nom';
 import { date_naissance, Date_vers_String } from './date_naissance';
 import { Objet_vers_MD } from './exporte_tableau';
 

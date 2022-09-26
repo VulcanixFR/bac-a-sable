@@ -11,6 +11,7 @@ export type Nom = {
 	nom: string;
 	prenom: string;
 	genre: 'H' | 'F' | 'M';
+	complement?: string;
 };
 
 export function genere_nom (
