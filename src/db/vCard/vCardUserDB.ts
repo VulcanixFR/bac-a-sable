@@ -1,4 +1,5 @@
-import { existsSync, lstatSync, mkdirSync, readdirSync } from 'fs';
+import { existsSync, lstatSync, mkdirSync, readdirSync, readFileSync } from 'fs';
+import { Utilisateur } from '../../objets/Utilisateur';
 
 /**
  * Une base de données utilisant ... des vCards ...
@@ -27,10 +28,26 @@ export class vCardUserDB {
         // Liste des vCard déjà présentes
         this.usrList = readdirSync(path)
             .filter(e =>    
-                e.endsWith(".vCard") 
+                e.endsWith(".vcf") 
                 && lstatSync(e).isFile()
-            ).map(e => e.replace(".vCard", ""));
+            ).map(e => e.replace(".vcf", ""));
 
     }
+
+    get_usr (uuid: string): Utilisateur | undefined {
+        const F = `${this.path}/${uuid}.vcf`;
+        if (!existsSync(F)) return undefined;
+
+        const vCard = readFileSync(F);
+
+
+    }
+
+    set_usr (usr: Utilisateur): void {
+        const F = `${this.path}/${usr.uuid}.vcf`;
+
+    }
+
+    
 
 }
